@@ -99,6 +99,6 @@ minion3.desc='You are a Minion of Mordred, an agent of Evil.
 			Keep in mind, however, Meril knows of you. 
 			It is your job to create chaos on both sides and uncover Merill. Good luck.';
 
-Array characters=new Array();
+var characters=new Array();
 characters=[meril,percival,servant1,servant2,servant3,servant4,servant5,
 		    assassin,morgana,mordred,oberon,minion1,minion2,minion3,minion3];
