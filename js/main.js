@@ -1,17 +1,20 @@
-var NUMBER_OF_PLAYERS = 5;
-var ALIASES;
-var playerCounter=0;
-
+var counter = 0;
+var aliases = [];
 /*
 Setup Implementation
 */
 function getNumPlayers(){
-	NUMBER_OF_PLAYERS = document.getElementById('players').value;
-	console.log(NUMBER_OF_PLAYERS);
-	if(NUMBER_OF_PLAYERS < 5){
+    var number = parseInt(document.getElementById('players').value)
+	if(number< 5){
 		alert("NOT ENOUGH PLAYERS");
 	}
-	ALIASES = new Array(NUMBER_OF_PLAYERS);
+	else{
+        localStorage.setItem("NUMBER_OF_PLAYERS", parseInt(number));
+    }
+}
+
+function setupNext(){
+    window.location.href = "alias.html";
 }
 
 function getSpecialCharacters(){
@@ -22,10 +25,11 @@ function getSpecialCharacters(){
 Aliases Implementation
 */
 function getAlias(){
-	ALIASES[playerCounter] = document.getElementById('alias').value;
-	playerCounter++;
-	aliasNext();
-}
-function aliasNext(){
-	
+    aliases.push(document.getElementById('alias').value);
+    document.getElementById("aliasForm").reset();
+	counter++;
+	if (counter.toString() === localStorage.getItem("NUMBER_OF_PLAYERS")){
+	    localStorage.setItem("ALIASES", aliases);
+        window.location.href="reveal.html";
+    }
 }
