@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	height: 100vh;
+	width: 100vw;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background: linear-gradient(#96783f ,#dbbb7f, #96783f);
+}
+
+h2{
+  text-align: center;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 10em;
+}
