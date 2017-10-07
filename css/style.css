@@ -15,6 +15,7 @@
 
 .one-device:hover, .two-device:hover {
   border-color: white;
+  color:white;
 
 }
 .one-device {
