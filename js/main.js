@@ -106,7 +106,7 @@ function revealCharacter(){
     document.getElementById("passDiv").appendChild(image);
     document.getElementById("passDiv").appendChild(paragraph);
     document.getElementById("passDiv").appendChild(button);
-    document.getElementById("passDiv").appendChild(document.createElement("<br/>"));
+    document.getElementById("passDiv").appendChild(document.createElement("br"));
 
 
     counter++;
