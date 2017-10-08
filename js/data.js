@@ -76,3 +76,7 @@ characters=[merlin,percival,servant1,servant2,servant3,servant4,servant5,
 function returnCharacters() {
 	return	characters;
 }
+
+var questsPerPlayers=[5,6,7,8,9,10]; // how many players are there
+var playersPerQuest=[[2,3,2,3,3],[2,3,4,3,4],[2,3,3,4,4],[3,4,4,5,5,],[2,4,4,5,5]];
+
