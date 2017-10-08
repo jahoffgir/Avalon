@@ -30,12 +30,17 @@ function getAlias(){
     document.getElementById("aliasForm").reset();
 	counter++;
 	if (counter.toString() === localStorage.getItem("NUMBER_OF_PLAYERS")){
+	    counter = 0;
 	    localStorage.setItem("ALIASES", aliases);
         window.location.href="reveal.html";
         //assignCharacters();
     }
 }
-
+var users;
+var charactersObjects;
+/*
+Reveal Implementation
+*/
 function assignCharacters() {
 
   var people = localStorage.getItem("ALIASES").split(",");
@@ -51,11 +56,25 @@ function assignCharacters() {
 
   for (var j = 0; j < people.length; j++) {
     var thing = {
-      alias : people[j],
-      character : arrchar[j],
+      al : people[j],
+      ch : arrchar[j]
     };
-    alert("Alias: " + thing.alias + "\n" + "Character: " + thing.character);
+    users.push(thing);
   }
+  charactersObjects = returnCharacters();
+}
 
+function revealCharacter(){
+    var user = users[counter];
+    var char;
+    for (var ele in charactersObjects){
+        if (ele.character === user.ch){
+            char = ele;
+            alert(ele.character);
+        }
+    }
+    var image = document.createElement("img");
+    image.setAttribute("src", users[counter].character);
 
+    counter++;
 }
