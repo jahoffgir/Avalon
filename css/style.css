@@ -59,7 +59,7 @@
 
 
 }
-#content h2, .player{
+#content h2, #player{
   text-align: center;
   font-family: 'MedievalSharp', cursive;
   font-size: 7em;
@@ -87,7 +87,12 @@
 .question{
   font-size: 2em;
   text-align: center;
-  margin:auto;
+}
+
+.special-character{
+  display: inline-block;
+  margin-left: 30%;
+  margin-right: -10%
 }
 
 @media screen and (max-height: 560px){
