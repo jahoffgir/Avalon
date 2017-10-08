@@ -14,7 +14,7 @@ function getNumPlayers(){
 	}
 	else{
         localStorage.setItem("NUMBER_OF_PLAYERS", parseInt(number));
-        localStorage.setItem("RULE", )
+        localStorage.setItem("RULE", playersPerQuest[questsPerPlayers.indexOf(number)])
         return true;
     }
 }

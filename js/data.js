@@ -84,6 +84,6 @@ function returnquestsPerPlayers(){
 	return questsPerPlayers
 }
 
-function playerPerQuest(){
+function returnplayerPerQuest(){
 	return playersPerQuest;
 }

@@ -77,6 +77,7 @@ function succeed(){
     if (countdown === 3){
         localStorage.setItem("RESULT", "1");
         alert("The quest was a success!");
+        setQuestState();
         window.location.href = "board.html";
     }
 }
@@ -84,5 +85,6 @@ function succeed(){
 function fail(){
     localStorage.setItem("RESULT", "0");
     alert("The quest was a failure...");
+    setQuestState();
     window.location.href = "board.html";
 }
