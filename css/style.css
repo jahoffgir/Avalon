@@ -95,19 +95,24 @@
   margin-right: -10%
 }
 
-#content:nth-child(3){
+#charImg{
   width: 20%;
   margin-left:5%;
 }
-#content:nth-child(4){
+#charDesc{
   width:70%;
-  float:right;
   margin-left: 5%;
+}
+#charImg,#charDesc{
+  display: inline-block;
 }
 
 @media screen and (max-height: 560px){
   #content{
     margin-top: 25%;
     padding-bottom: 0;
+  }
+  #charImg, #charDesc{
+    display: block;
   }
 }
