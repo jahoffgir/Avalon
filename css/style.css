@@ -66,6 +66,12 @@
   font-size: 7em;
   padding-top: 2%;
 }
+#content h3{
+  text-align: center;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 4em;
+  padding-top: 2%;
+}
 #content input{
   font-size: 2em;
   border:2px solid black;
@@ -103,6 +109,27 @@
 #charDesc{
   font-size: 1.5em;
 }
+
+.btn{
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+  width: 30%;
+  line-height: 2;
+  margin:1% auto;
+
+}
+#approve{
+  background-color: blue;
+}
+#disapprove{
+  background-color: red;
+}
+.btn:hover{
+  filter:brightness(80%);
+  color:white;
+}
+
 
 @media screen and (max-height: 560px){
   #content{
