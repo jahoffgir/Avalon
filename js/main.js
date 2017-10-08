@@ -36,8 +36,8 @@ function getAlias(){
         //assignCharacters();
     }
 }
-var users;
-var charactersObjects;
+var users = [];
+var charactersObjects = [];
 /*
 Reveal Implementation
 */

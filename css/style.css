@@ -46,3 +46,54 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/*
+ *******
+ GENERAL STYLING
+ *******
+ */
+
+#content{
+  height:50vh;
+  background: white;
+  margin: 12% 15%;
+
+
+}
+#content h2, .player{
+  text-align: center;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 7em;
+  padding-top: 2%;
+}
+#content input{
+  font-size: 2em;
+  border:2px solid black;
+  width:50%;
+  margin: 2% 25%;
+
+}
+.next-btn{
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+  width: 25%;
+  margin: 0 auto;
+  background-color: #d6c693;
+}
+.next-btn:hover{
+  background-color: #a88f41;
+  color:white;
+}
+.question{
+  font-size: 2em;
+  text-align: center;
+  margin: 0 1% 2% 9%;
+}
+
+@media screen and (max-height: 560px){
+  #content{
+    margin-top: 25%;
+    padding-bottom: 0;
+  }
+}
