@@ -44,7 +44,7 @@ function getAlias(){
     aliases.push(document.getElementById('alias').value);
     document.getElementById("aliasForm").reset();
 	counter++;
-	if (counter.toString() === localStorage.getItem("NUMBER_OF_PLAYERS")){
+	if (counter === parseInt(localStorage.getItem("NUMBER_OF_PLAYERS"))){
 	    counter = 0;
 	    localStorage.setItem("ALIASES", aliases);
         window.location.href="reveal.html";
