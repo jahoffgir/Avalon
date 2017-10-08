@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   border: 0;
@@ -14,6 +15,7 @@
 }
 
 .one-device:hover, .two-device:hover {
+  cursor: pointer;
   border-color: white;
   color:white;
 
@@ -24,12 +26,10 @@
 }
 .one-device, .two-device{
   color: #d6c693;
-  /*color:white;*/
   border: 1px solid;
   border-color: #d6c693;
   width: 38%;
   padding: 4%;
-
   font-size: 150%;
   text-align: center;
   display: inline-block;
@@ -40,13 +40,64 @@
   font-size: 10em;
   color: #d6c693;
 }
-/*#middle-content img {
-		width: 50%auto;
-		height: 50%auto;
-}*/
 #middle-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/*
+ *********
+ GENERAL STYLING
+ *********
+ */
+ *{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), url("../images/background/medieval.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+   width: 100vw;
+}
+#content{
+  background: white;
+  margin: 25% 15%;
+  top:50%;
+  bottom: 50%;
+
+
+}
+#content h2{
+  text-align: center;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 7em;
+  padding-top: 2%;
+}
+#content input{
+  font-size: 2em;
+  border:2px solid black;
+  width:50%;
+  margin: 2% 25%;
+
+}
+.next-btn{
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+  width: 25%;
+  margin: 0 auto;
+  background-color: #d6c693;
+}
+.next-btn:hover{
+  background-color: #a88f41;
+  color:white;
+}
+.question{
+  font-size: 2em;
+  text-align: center;
+  margin: 0 1% 2% 9%;
 }
