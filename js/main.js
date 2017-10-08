@@ -128,12 +128,12 @@ function nextReveal(){
         assignAlias();
     }
     else {
-        window.location.href = "board.html";
+        window.location.href = "recruitment.html";
     }
 }
 
 function getUsers(){
-    return users;
+
 }
 
 function getCharactersObjects(){
