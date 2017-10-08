@@ -85,7 +85,7 @@ function revealCharacter(){
     paragraph.innerHTML = char.desc;
     var button = document.createElement("div");
     button.setAttribute("class", "next-btn");
-    button.setAttribute("on-click", "nextReveal()");
+    button.setAttribute("onclick", "nextReveal()");
     button.innerHTML = "Next";
 
     document.getElementById("passDiv").appendChild(image);
@@ -98,5 +98,12 @@ function revealCharacter(){
 
 function nextReveal(){
     document.getElementById("passDiv").innerHTML = "";
+    var button = document.createElement("div");
+    button.setAttribute("id", "reveal-btn");
+    button.setAttribute("onclick", "revealCharacter()");
+    button.innerHTML = "Reveal";
+
+    document.getElementById("revealDiv").appendChild(button);
+    assignAlias();
 
 }
