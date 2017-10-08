@@ -93,8 +93,10 @@ function revealCharacter(){
     document.getElementById("revealDiv").innerHTML = "";
 
     var image = document.createElement("img");
+    image.setAttribute("id", "charImage");
     image.setAttribute("src", char.image);
     var paragraph = document.createElement("p");
+    paragraph.setAttribute("id", "charDesc");
     paragraph.innerHTML = char.desc;
     var button = document.createElement("div");
     button.setAttribute("class", "next-btn");
@@ -110,13 +112,18 @@ function revealCharacter(){
 }
 
 function nextReveal(){
-    document.getElementById("passDiv").innerHTML = "";
-    var button = document.createElement("div");
-    button.setAttribute("id", "reveal-btn");
-    button.setAttribute("onclick", "revealCharacter()");
-    button.innerHTML = "Reveal";
+    if (counter !== users.length) {
+        document.getElementById("passDiv").innerHTML = "";
+        var button = document.createElement("div");
+        button.setAttribute("id", "reveal-btn");
+        button.setAttribute("onclick", "revealCharacter()");
+        button.innerHTML = "Reveal";
 
-    document.getElementById("revealDiv").appendChild(button);
-    assignAlias();
+        document.getElementById("revealDiv").appendChild(button);
+        assignAlias();
+    }
+    else {
+        window.location.href = "board.html";
+    }
 
 }
