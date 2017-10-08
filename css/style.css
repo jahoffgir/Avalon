@@ -60,13 +60,13 @@
 
 
 }
-#content h2, #player{
+#content h2, #player,.aliasConfirm{
   text-align: center;
   font-family: 'MedievalSharp', cursive;
   font-size: 7em;
   padding-top: 2%;
 }
-#content h3{
+#content h3, #recruits{
   text-align: center;
   font-family: 'MedievalSharp', cursive;
   font-size: 4em;
@@ -130,13 +130,24 @@
   color:white;
 }
 
+label ,.choice{
+  font-size: 2em;
+  margin: 0 4%;
+}
+#options{
+  margin-left: 30%;
+}
 
-@media screen and (max-height: 560px){
+
+@media screen and (max-width: 560px){
   #content{
     margin-top: 25%;
     padding-bottom: 0;
   }
   #charImage, #charDesc{
     display: block;
+  }
+  #options{
+    margin-right: 50%;
   }
 }
