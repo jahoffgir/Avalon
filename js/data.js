@@ -77,6 +77,8 @@ function returnCharacters() {
 	return	characters;
 }
 
+var badPeople = ['Assasin', 'Morgana', 'Mordred', 'Oberon', 'Minion of Mordred 1', 'Minion of Mordred 2', 'Minion of Mordred 3'];
+
 var questsPerPlayers=[5,6,7,8,9,10]; // how many players are there
 var playersPerQuest=[[2,3,2,3,3],[2,3,4,3,4],[2,3,3,4,4],[3,4,4,5,5,],[3,4,4,5,5],[3,4,4,5,5]];
 

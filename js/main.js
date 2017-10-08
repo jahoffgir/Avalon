@@ -110,8 +110,33 @@ function revealCharacter(){
     button.setAttribute("onclick", "nextReveal()");
     button.innerHTML = "Next";
 
+    var specialThings = document.createElement("div");
+    specialThings.setAttribute("id", "charDesc");
+    if (char.character === "Merlin") {
+        var sentence = "";
+        for (var i = 0; i < users.length; i++) {
+            if (charactersObjects[i] === 'Assassin'){
+                sentence += users[i] + "is the Assassin" + "\n";
+            }
+            else if (charactersObjects[i] === 'Morgana'){
+                sentence += users[i] + "is the Morgana" + "\n";
+            }
+            else if (charactersObjects[i] === 'Mordred'){
+                sentence += users[i] + "is Mordred" + "\n";
+            }
+            else if (charactersObjects[i] === 'Oberon'){
+                sentence += users[i] + "is Oberon" + "\n";
+            }
+            else if (charactersObjects[i]["character"].indexOf("Minion") !== -1){
+                sentence += users[i] + "is a Minion of Mordred" + "\n";
+            }
+        }
+        specialThings.innerHTML = sentence;
+    }
+
     document.getElementById("passDiv").appendChild(image);
     document.getElementById("passDiv").appendChild(paragraph);
+    document.getElementById("passDiv").appendChild(specialThings);
     document.getElementById("passDiv").appendChild(button);
     document.getElementById("passDiv").appendChild(document.createElement("br"));
 
@@ -131,7 +156,7 @@ function nextReveal(){
         assignAlias();
     }
     else {
-        window.location.href = "recruitment.html";
+        window.location.href = "board.html";
     }
 }
 

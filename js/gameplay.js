@@ -47,7 +47,7 @@ var selected = 0;
 
 function handleChange(box){
     if (box.checked === true) {
-        if (selected < 3) {
+        if (selected < localStorage.getItem("NUMBER_OF_PLAYERS_PER_QUEST")) {
             players.push(box.value);
             selected++;
         }
@@ -77,14 +77,14 @@ function succeed(){
     if (countdown === 3){
         localStorage.setItem("RESULT", "1");
         alert("The quest was a success!");
-        //setQuestState();
         window.location.href = "board.html";
+        setQuestState();
     }
 }
 
 function fail(){
     localStorage.setItem("RESULT", "0");
     alert("The quest was a failure...");
-    //setQuestState();
     window.location.href = "board.html";
+    setQuestState();
 }
