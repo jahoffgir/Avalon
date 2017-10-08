@@ -77,18 +77,26 @@ function revealCharacter(){
         }
     }
 
+    document.getElementById("revealDiv").innerHTML = "";
+
     var image = document.createElement("img");
     image.setAttribute("src", char.image);
     var paragraph = document.createElement("p");
     paragraph.innerHTML = char.desc;
+    var button = document.createElement("div");
+    button.setAttribute("class", "next-btn");
+    button.setAttribute("on-click", "nextReveal()");
+    button.innerHTML = "Next";
 
     document.getElementById("passDiv").appendChild(image);
     document.getElementById("passDiv").appendChild(paragraph);
+    document.getElementById("passDiv").appendChild(button);
 
 
     counter++;
 }
 
 function nextReveal(){
+    document.getElementById("passDiv").innerHTML = "";
 
 }
