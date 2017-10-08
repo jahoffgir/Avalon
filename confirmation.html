@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    <script type='text/javascript' src='js/main.js'></script>
     <title>Confirmation</title>
 </head>
-<body>
+<body onload="whichAlias()">
 	<div id='content'>
 	    <div id="recruits"></div>
 	    <h3>Do you approve of this recruitment?</h3>
-	    <div class="btn" id='approve'>Approve</div>
-	    <div class="btn" id='disapprove'>Disapprove</div>
+        <div class="aliasConfirm"></div>
+	    <div class="btn" onclick="recordConfirmation(this)" id='approve'>Approve</div>
+	    <div class="btn" onclick="recordConfirmation(this)" id='disapprove'>Disapprove</div>
+        <div class="summary"></div>
 	    <br/>
 	</div>
 </body>

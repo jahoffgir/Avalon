@@ -2,6 +2,7 @@ var counter = 0;
 var aliases = [];
 var sumAccept = 0;
 var sumReject = 0;
+var accrej = [];
 /*
 Setup Implementation
 */
@@ -141,12 +142,29 @@ function getUsers(){
 function getCharactersObjects(){
     return charactersObjects;
 }
-
-function recordConfirmation(elem) {
-    console.log(elem);
-    if (elem.textContent == "Approve") {
-        alert("hi")
+function whichAlias() {
+    var pop = localStorage.getItem("ALIASES").split(",")
+    if (sumAccept+sumReject <= 5) {
+        var person = pop[sumReject + sumAccept - 1]
     } else {
-        alert("no bueno")
+        var person = pop[sumReject + sumAccept]
+    }
+    var classes = document.getElementsByClassName("aliasConfirm");
+    classes[0].innerHTML = person;
+}
+function recordConfirmation(elem) {
+    if (sumAccept+sumReject <= 4) {
+        var classes = document.getElementsByClassName("summary");
+        if (elem.textContent === "Approve") {
+            classes[0].innerHTML = document.getElementsByClassName("aliasConfirm")[0].innerHTML + " person approved the quest";
+            sumAccept++;
+            accrej.push(1)
+        } else {
+            classes[0].innerHTML = document.getElementsByClassName("aliasConfirm")[0].innerHTML + " person rejected the quest";
+            sumReject++;
+            accrej.push(0)
+        }
+        localStorage.setItem("ACCREJ", accrej);
+        whichAlias()
     }
 }
