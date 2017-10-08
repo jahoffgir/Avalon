@@ -1,5 +1,7 @@
 var counter = 0;
 var aliases = [];
+var sumAccept = 0;
+var sumReject = 0;
 /*
 Setup Implementation
 */
@@ -138,4 +140,13 @@ function getUsers(){
 
 function getCharactersObjects(){
     return charactersObjects;
+}
+
+function recordConfirmation(elem) {
+    console.log(elem);
+    if (elem.textContent == "Approve") {
+        alert("hi")
+    } else {
+        alert("no bueno")
+    }
 }

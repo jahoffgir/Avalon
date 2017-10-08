@@ -28,5 +28,3 @@ function setQuestState(num, bool) {
         }
     }
 }
-
-
