@@ -95,11 +95,11 @@
   margin-right: -10%
 }
 
-#content:nth-child(1){
+#content:nth-child(3){
   width: 20%;
   margin-left:5%;
 }
-#content:nth-child(2){
+#content:nth-child(4){
   width:70%;
   float:right;
   margin-left: 5%;
