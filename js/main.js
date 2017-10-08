@@ -46,6 +46,7 @@ Aliases Implementation
 function getAlias(){
     aliases.push(document.getElementById('alias').value);
     document.getElementById("aliasForm").reset();
+    document.getElementById('aliasForm').focus();
 	counter++;
 	if (counter === parseInt(localStorage.getItem("NUMBER_OF_PLAYERS"))){
 	    counter = 0;
