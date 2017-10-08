@@ -64,7 +64,25 @@ function handleChange(box){
     }
 }
 
+
 function recruit(){
     localStorage.setItem("RECRUITED", players);
     window.location.href = "confirmation.html";
+}
+
+var countdown = 0;
+
+function succeed(){
+    countdown++;
+    if (countdown === 3){
+        localStorage.setItem("RESULT", "1");
+        alert("The quest was a success!");
+        window.location.href = "board.html";
+    }
+}
+
+function fail(){
+    localStorage.setItem("RESULT", "0");
+    alert("The quest was a failure...");
+    window.location.href = "board.html";
 }

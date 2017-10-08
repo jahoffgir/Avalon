@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
-    <title>Title</title>
+	<script type='text/javascript' src='js/gameplay.js'></script>
+	<title>Title</title>
 </head>
 <body>
 	<div id='content'>
 	    <h3>You decide the results of this quest</h3>
-	    <div class="btn" id='approve'>Success</div>
-	    <div class="btn" id='disapprove'>Failure</div><br/>
+	    <div class="btn" id='approve' onclick="succeed();">Success</div>
+	    <div class="btn" id='disapprove' onclick="fail();">Failure</div><br/>
 	</div>
 </body>
 </html>
