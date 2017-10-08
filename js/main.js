@@ -7,20 +7,20 @@ var accrej = [];
 Setup Implementation
 */
 function getNumPlayers(){
-    var number = parseInt(document.getElementById('players').value)
+    var number = parseInt(document.getElementById('players').value);
 	if(number< 5){
 		alert("NOT ENOUGH PLAYERS");
-        console.log(false);
         return false;
 	}
 	else{
         localStorage.setItem("NUMBER_OF_PLAYERS", parseInt(number));
+        localStorage.setItem("RULE", )
         return true;
     }
 }
 
 function getCharacters(){
-    var num = localStorage.getItem("NUMBER_OF_PLAYERS")
+    var num = localStorage.getItem("NUMBER_OF_PLAYERS");
     var goodnum = Math.ceil(num/2);
     var badnum = num - goodnum;
     var goodCharacters = ["Merlin", "Percival"];
