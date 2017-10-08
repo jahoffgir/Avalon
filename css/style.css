@@ -95,6 +95,16 @@
   margin-right: -10%
 }
 
+#content:nth-child(1){
+  width: 20%;
+  margin-left:5%;
+}
+#content:nth-child(2){
+  width:70%;
+  float:right;
+  margin-left: 5%;
+}
+
 @media screen and (max-height: 560px){
   #content{
     margin-top: 25%;
