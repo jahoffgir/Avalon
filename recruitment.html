@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    <script type='text/javascript' src='js/gameplay.js'></script>
     <title>Title</title>
 </head>
-<body>
+<body onload="pickKing(); loadChoices();">
 	<div id='content'>
 	    <div>Insert crown pic here</div>
 	    <div id="player">-Alias Placeholder-</div>
 	    <p>Select the servants you would like to send on the quest</p>
-	    <div id="servants"></div>
+	    <div id="options"></div>
 	    <div class="next-btn">Recruit</div>
+        <input type="checkbox"style="display: inline;"> <p style="display: inline">wtf</p>
 	</div>
 </body>
 </html>
