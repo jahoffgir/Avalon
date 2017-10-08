@@ -7,9 +7,11 @@ function getNumPlayers(){
     var number = parseInt(document.getElementById('players').value)
 	if(number< 5){
 		alert("NOT ENOUGH PLAYERS");
+        return false;
 	}
 	else{
         localStorage.setItem("NUMBER_OF_PLAYERS", parseInt(number));
+        return true;
     }
 }
 
