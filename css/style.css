@@ -92,19 +92,16 @@
 .special-character{
   display: inline-block;
   margin-left: 30%;
-  margin-right: -10%
+  margin-right: -10%;
 }
 
-#charImg{
-  width: 20%;
-  margin-left:5%;
+#charImage{
+  margin: 0 1% 2% 4%;
 }
 #charDesc{
-  width:70%;
-  margin-left: 5%;
-}
-#charImg,#charDesc{
-  display: inline-block;
+  padding-bottom:10%;
+  font-size: 2em;
+  margin-bottom: 10%;
 }
 
 @media screen and (max-height: 560px){
@@ -112,7 +109,7 @@
     margin-top: 25%;
     padding-bottom: 0;
   }
-  #charImg, #charDesc{
+  #charImage, #charDesc{
     display: block;
   }
 }
