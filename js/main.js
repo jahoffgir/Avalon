@@ -13,12 +13,27 @@ function getNumPlayers(){
     }
 }
 
-function setupNext(){
-    window.location.href = "alias.html";
-}
-
 function getCharacters(){
-    var selected = ["Assassin", "Merlin", "Morgana", "Percival", "Loyal Servant of King Arthur"];
+    var num = localStorage.getItem("NUMBER_OF_PLAYERS")
+    var goodnum = Math.ceil(num/2);
+    var badnum = num - goodnum;
+    var goodCharacters = ["Merlin", "Percival"];
+    var badCharacters = ["Assassin", "Morgana"];
+
+    var servants = 1;
+    while (goodCharacters.length < goodnum){
+        var servant = "Loyal Servant of King Arthur " + servants;
+        goodCharacters.push(servant);
+        servants++;
+    }
+
+    var minions = 1;
+    while (badCharacters.length < badnum){
+        var minion = 'Minion of Mordred ' + minions;
+        badCharacters.push(minion);
+        minions++;
+    }
+    var selected = goodCharacters.concat(badCharacters);
     localStorage.setItem("CHARACTERS", selected);
 }
 
@@ -44,8 +59,6 @@ Reveal Implementation
 
 function assignCharacters() {
     var people = localStorage.getItem("ALIASES").split(",");
-    var bad = Math.floor(people.length/2);
-    var good = Math.ceil(people.length/2);
     var characters = localStorage.getItem("CHARACTERS").split(",");
     var arrchar = [];
     for (var i = 0; i < people.length; i++) {

@@ -9,27 +9,27 @@ var percival= {
 	desc:"You are a Loyal Servant of Arthur fighting for Goodness. Your role is to protect the identity of Meril even if that means sacrificing yourself. The problem is you know who both Morgana and Meril are, but you don't know which player is Meril. Keeping Meril unknown to the powers of Evil, keeps him alive, and that is important for the mission of Goodness."
 };
 var servant1={
-	character:'Loyal Servant of King Arthur',
+	character:'Loyal Servant of King Arthur 1',
 	image:'images/servants/servant1.png',
 	desc:"You are a Loyal Servant of Arthur fighting for Goodness. Stay true to the mission set forth by King Arthur, for that is important in succeeding in the cause."
 };
 var servant2= {
-	character:'Loyal Servant of King Arthur',
+	character:'Loyal Servant of King Arthur 2',
 	image:'images/servants/servant2.png',
 	desc:'You are a Loyal Servant of Arthur fighting for Goodness. Stay true to the mission set forth by King Arthur, for that is important in succeeding in the cause.'
 };
 var servant3= {
-	character:'Loyal Servant of King Arthur',
+	character:'Loyal Servant of King Arthur 3',
 	image:'images/servants/servant3.png',
 	desc:'You are a Loyal Servant of Arthur fighting for Goodness. Stay true to the mission set forth by King Arthur, for that is important in succeeding in the cause.'
 };
 var servant4= {
-	character:'Loyal Servant of King Arthur',
+	character:'Loyal Servant of King Arthur 4',
 	image:'images/servants/servant4.png',
 	desc:'You are a Loyal Servant of Arthur fighting for Goodness. Stay true to the mission set forth by King Arthur, for that is important in succeeding in the cause.'
 };
 var servant5= {
-	character:'Loyal Servant of King Arthur',
+	character:'Loyal Servant of King Arthur 5',
 	image:'images/servants/servant5.png',
 	desc:'You are a Loyal Servant of Arthur fighting for Goodness. Stay true to the mission set forth by King Arthur, for that is important in succeeding in the cause.'
 };
@@ -55,17 +55,17 @@ var oberon = {
 };
 
 var minion1= {
-	character:'Minion of Mordred',
+	character:'Minion of Mordred 1',
 	image:'images/minions/minion1.png',
 	desc: 'You are a Minion of Mordred, an agent of Evil. But you must be as deceitful as you are Evil in order to keep your allegiances hidden. Making it too obvious that you are Evil could be a win to the cause for Goodness.'
 };
 var minion2= {
-	character:'Minion of Mordred',
+	character:'Minion of Mordred 2',
 	image:'images/minions/minion2.png',
 	desc:'You are a Minion of Mordred, an agent of Evil. But you must be as deceitful as you are Evil in order to keep your allegiances hidden. Making it too obvious that you are Evil could be a win to the cause for Goodness.'
 };
 var minion3={
-	character: 'Minion of Mordred',
+	character: 'Minion of Mordred 3',
 	image: 'images/minions/minion3.png',
 	desc: 'You are a Minion of Mordred, an agent of Evil. But your role is to cause confusion and chaos. You know of the other Evil players, but they do not know you. Keep in mind, however, Meril knows of you. It is your job to create chaos on both sides and uncover Merill. Good luck.'
 };
