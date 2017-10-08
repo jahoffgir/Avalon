@@ -130,13 +130,24 @@
   color:white;
 }
 
+label ,.choice{
+  font-size: 2em;
+  margin: 0 4%;
+}
+#options{
+  margin-left: 30%;
+}
 
-@media screen and (max-height: 560px){
+
+@media screen and (max-width: 560px){
   #content{
     margin-top: 25%;
     padding-bottom: 0;
   }
   #charImage, #charDesc{
     display: block;
+  }
+  #options{
+    margin-right: 50%;
   }
 }
