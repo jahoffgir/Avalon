@@ -8,17 +8,14 @@
     <script type='text/javascript' src='js/data.js'></script>
     <script type='text/javascript' src='js/main.js'></script>
 </head>
-<body onload="assignCharacters()">
+<body onload="assignCharacters(); assignAlias();">
     <div id='content'>
         <div id='revealDiv'>
-            <span class="player">-Alias-</span>
-            <div id="reveal-btn" onclick="revealCharacters()">Reveal</div>
+            <div id="player">-Alias-</div>
+            <div id="reveal-btn" onclick="revealCharacter()">Reveal</div>
         </div>
         <div id='passDiv'>
-            <div id="identity">
-                Character data goes here
-                <div class="next-btn">Next Player</div>
-            </div>
+
         </div>
     </div>
 </body>
