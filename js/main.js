@@ -143,8 +143,9 @@ function getCharactersObjects(){
     return charactersObjects;
 }
 function whichAlias() {
+
     var pop = localStorage.getItem("ALIASES").split(",")
-    if (sumAccept+sumReject <= 5) {
+    if (sumAccept+sumReject >= 5) {
         var person = pop[sumReject + sumAccept - 1]
     } else {
         var person = pop[sumReject + sumAccept]
@@ -152,15 +153,30 @@ function whichAlias() {
     var classes = document.getElementsByClassName("aliasConfirm");
     classes[0].innerHTML = person;
 }
+function loadSelectedPlayers() {
+    var picked = localStorage.getItem("RECRUITED").split(",");
+    var group = localStorage.getItem("ALIASES").split(",");
+    var concat = ""
+    for (var i = 0; i < picked.length; i++) {
+        concat += group[parseInt(picked[i])-1] + " "
+    }
+    concat += "are picked to go on the quest"
+    var peop = document.getElementById("recruits");
+
+    peop.innerHTML = concat
+}
 function recordConfirmation(elem) {
     if (sumAccept+sumReject <= 4) {
-        var classes = document.getElementsByClassName("summary");
+        // var classes = document.getElementsByClassName("summary");
+
+        // classes[0].innerHTML
+
         if (elem.textContent === "Approve") {
-            classes[0].innerHTML = document.getElementsByClassName("aliasConfirm")[0].innerHTML + " person approved the quest";
+            // classes[0].innerHTML = document.getElementsByClassName("aliasConfirm")[0].innerHTML + " person approved the quest";
             sumAccept++;
             accrej.push(1)
         } else {
-            classes[0].innerHTML = document.getElementsByClassName("aliasConfirm")[0].innerHTML + " person rejected the quest";
+            // classes[0].innerHTML = document.getElementsByClassName("aliasConfirm")[0].innerHTML + " person rejected the quest";
             sumReject++;
             accrej.push(0)
         }
