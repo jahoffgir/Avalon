@@ -7,9 +7,12 @@ function getNumPlayers(){
     var number = parseInt(document.getElementById('players').value)
 	if(number< 5){
 		alert("NOT ENOUGH PLAYERS");
+        console.log(false);
+        return false;
 	}
 	else{
         localStorage.setItem("NUMBER_OF_PLAYERS", parseInt(number));
+        return true;
     }
 }
 
@@ -43,6 +46,7 @@ Aliases Implementation
 function getAlias(){
     aliases.push(document.getElementById('alias').value);
     document.getElementById("aliasForm").reset();
+    document.getElementById('alias').focus();
 	counter++;
 	if (counter === parseInt(localStorage.getItem("NUMBER_OF_PLAYERS"))){
 	    counter = 0;
@@ -106,6 +110,7 @@ function revealCharacter(){
     document.getElementById("passDiv").appendChild(image);
     document.getElementById("passDiv").appendChild(paragraph);
     document.getElementById("passDiv").appendChild(button);
+    document.getElementById("passDiv").appendChild(document.createElement("br"));
 
 
     counter++;
