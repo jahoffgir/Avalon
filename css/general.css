@@ -16,3 +16,14 @@ h2{
   font-family: 'MedievalSharp', cursive;
   font-size: 10em;
 }
+
+/*For board images*/
+#board {
+	margin-left: 3%;
+}
+.quest-icon {
+	margin: 2%;
+	border-radius: 100%;
+	height: 15%;
+	width: 15%;
+}

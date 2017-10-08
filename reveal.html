@@ -8,13 +8,15 @@
     <script type='text/javascript' src='js/data.js'></script>
     <script type='text/javascript' src='js/main.js'></script>
 </head>
-<body onload="assignCharacters()">
-    <div class="player">-Alias Placeholder-</div>
-    <div id="reveal-btn" onclick="revealCharacters()">Reveal</div>
+<body onload="assignCharacters(); assignAlias();">
+    <div id='content'>
+        <div id="player">-Alias-</div>
+        <div id='revealDiv'>
+            <div id="reveal-btn" onclick="revealCharacter()">Reveal</div>
+        </div>
+        <div id='passDiv'>
 
-    <div id="identity">
-        Character data goes here
-        <div class="next-btn">Next</div>
+        </div>
     </div>
 </body>
 </html>

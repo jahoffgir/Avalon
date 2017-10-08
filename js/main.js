@@ -41,40 +41,69 @@ var charactersObjects = [];
 /*
 Reveal Implementation
 */
-function assignCharacters() {
 
-  var people = localStorage.getItem("ALIASES").split(",");
-  var bad = Math.floor(people.length/2);
-  var good = Math.ceil(people.length/2);
-  var characters = localStorage.getItem("CHARACTERS").split(",");
-  var arrchar = [];
-  for (var i = 0; i < people.length; i++) {
+function assignCharacters() {
+    var people = localStorage.getItem("ALIASES").split(",");
+    var bad = Math.floor(people.length/2);
+    var good = Math.ceil(people.length/2);
+    var characters = localStorage.getItem("CHARACTERS").split(",");
+    var arrchar = [];
+    for (var i = 0; i < people.length; i++) {
     var num = Math.floor(Math.random() * characters.length);
       arrchar.push(characters[num]);
       characters.splice(num, 1);
-  }
+    }
 
-  for (var j = 0; j < people.length; j++) {
+    for (var j = 0; j < people.length; j++) {
     var thing = {
       al : people[j],
       ch : arrchar[j]
     };
     users.push(thing);
-  }
-  charactersObjects = returnCharacters();
+    }
+    charactersObjects = returnCharacters();
+    }
+
+function assignAlias(){
+    document.getElementById("player").innerHTML = users[counter].al;
 }
 
 function revealCharacter(){
     var user = users[counter];
     var char;
     for (var ele in charactersObjects){
-        if (ele.character === user.ch){
-            char = ele;
-            alert(ele.character);
+        if (charactersObjects[ele].character === user.ch){
+            char = charactersObjects[ele];
         }
     }
+
+    document.getElementById("revealDiv").innerHTML = "";
+
     var image = document.createElement("img");
-    image.setAttribute("src", users[counter].character);
+    image.setAttribute("src", char.image);
+    var paragraph = document.createElement("p");
+    paragraph.innerHTML = char.desc;
+    var button = document.createElement("div");
+    button.setAttribute("class", "next-btn");
+    button.setAttribute("onclick", "nextReveal()");
+    button.innerHTML = "Next";
+
+    document.getElementById("passDiv").appendChild(image);
+    document.getElementById("passDiv").appendChild(paragraph);
+    document.getElementById("passDiv").appendChild(button);
+
 
     counter++;
+}
+
+function nextReveal(){
+    document.getElementById("passDiv").innerHTML = "";
+    var button = document.createElement("div");
+    button.setAttribute("id", "reveal-btn");
+    button.setAttribute("onclick", "revealCharacter()");
+    button.innerHTML = "Reveal";
+
+    document.getElementById("revealDiv").appendChild(button);
+    assignAlias();
+
 }

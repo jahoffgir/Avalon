@@ -54,13 +54,12 @@
  */
 
 #content{
-  height:50vh;
   background: white;
   margin: 12% 15%;
 
 
 }
-#content h2, .player{
+#content h2, #player{
   text-align: center;
   font-family: 'MedievalSharp', cursive;
   font-size: 7em;
@@ -73,7 +72,7 @@
   margin: 2% 25%;
 
 }
-.next-btn{
+.next-btn, #reveal-btn{
   font-size: 2em;
   text-align: center;
   cursor: pointer;
@@ -81,14 +80,19 @@
   margin: 0 auto;
   background-color: #d6c693;
 }
-.next-btn:hover{
+.next-btn:hover, #reveal-btn:hover{
   background-color: #a88f41;
   color:white;
 }
 .question{
   font-size: 2em;
   text-align: center;
-  margin: 0 1% 2% 9%;
+}
+
+.special-character{
+  display: inline-block;
+  margin-left: 30%;
+  margin-right: -10%
 }
 
 @media screen and (max-height: 560px){
