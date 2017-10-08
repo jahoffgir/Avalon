@@ -10,7 +10,7 @@
     <script type='text/javascript' src='js/board.js'></script>
     <title>Board</title>
 </head>
-<body>
+<body onload="initBoard();">
 	<div id='content'>
 		<h2>Game Board</h2>
 	    <div id="characters-btn">Display all the characters</div>
@@ -21,7 +21,7 @@
             <img onmouseover="stateContent(this)" class="quest-icon" src="images/white.png">
             <img onmouseover="stateContent(this)" class="quest-icon" src="images/white.png">
         </div>
-	    <div class="next-btn" onclick="setQuestState()">Next</div><br/>
+	    <div class="next-btn" onclick="window.location.href='recruitment.html'">Next</div><br/>
 	</div>
 </body>
 </html>

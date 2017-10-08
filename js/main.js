@@ -175,6 +175,7 @@ function recordConfirmation(elem) {
             // classes[0].innerHTML = document.getElementsByClassName("aliasConfirm")[0].innerHTML + " person approved the quest";
             sumAccept++;
             accrej.push(1)
+
         } else {
             // classes[0].innerHTML = document.getElementsByClassName("aliasConfirm")[0].innerHTML + " person rejected the quest";
             sumReject++;
@@ -182,5 +183,12 @@ function recordConfirmation(elem) {
         }
         localStorage.setItem("ACCREJ", accrej);
         whichAlias()
+        if (sumReject + sumAccept === parseInt(localStorage.getItem("NUMBER_OF_PLAYERS"))) {
+            if (sumAccept > sumReject) {
+                window.location.href="quest.html"
+            } else {
+                window.location.href="recruitment.html";
+            }
+        }
     }
 }
