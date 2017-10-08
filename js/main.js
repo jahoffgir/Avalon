@@ -7,6 +7,7 @@ function getNumPlayers(){
     var number = parseInt(document.getElementById('players').value)
 	if(number< 5){
 		alert("NOT ENOUGH PLAYERS");
+        console.log(false);
         return false;
 	}
 	else{
