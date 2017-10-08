@@ -63,3 +63,8 @@ function handleChange(box){
         selected --;
     }
 }
+
+function recruit(){
+    localStorage.setItem("RECRUITED", players);
+    window.location.href = "confirmation.html";
+}
