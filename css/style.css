@@ -87,7 +87,7 @@
 .question{
   font-size: 2em;
   text-align: center;
-  margin: 0 1% 2% 9%;
+  margin:auto;
 }
 
 @media screen and (max-height: 560px){
