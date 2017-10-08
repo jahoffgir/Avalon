@@ -95,9 +95,24 @@
   margin-right: -10%
 }
 
+#charImg{
+  width: 20%;
+  margin-left:5%;
+}
+#charDesc{
+  width:70%;
+  margin-left: 5%;
+}
+#charImg,#charDesc{
+  display: inline-block;
+}
+
 @media screen and (max-height: 560px){
   #content{
     margin-top: 25%;
     padding-bottom: 0;
+  }
+  #charImg, #charDesc{
+    display: block;
   }
 }
