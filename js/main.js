@@ -125,5 +125,12 @@ function nextReveal(){
     else {
         window.location.href = "board.html";
     }
+}
 
+function getUsers(){
+    return users;
+}
+
+function getCharactersObjects(){
+    return charactersObjects;
 }
