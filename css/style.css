@@ -15,6 +15,7 @@
 }
 
 .one-device:hover, .two-device:hover {
+  cursor: pointer;
   border-color: white;
   color:white;
 
@@ -25,12 +26,10 @@
 }
 .one-device, .two-device{
   color: #d6c693;
-  /*color:white;*/
   border: 1px solid;
   border-color: #d6c693;
   width: 38%;
   padding: 4%;
-
   font-size: 150%;
   text-align: center;
   display: inline-block;
@@ -41,10 +40,6 @@
   font-size: 10em;
   color: #d6c693;
 }
-/*#middle-content img {
-    width: 50%auto;
-    height: 50%auto;
-}*/
 #middle-content {
     position: absolute;
     top: 50%;
