@@ -96,12 +96,11 @@
 }
 
 #charImage{
-  margin: 0 1% 2% 4%;
+ display:block;
+ margin: auto;
 }
 #charDesc{
-  padding-bottom:10%;
-  font-size: 2em;
-  margin-bottom: 10%;
+  font-size: 1.5em;
 }
 
 @media screen and (max-height: 560px){
