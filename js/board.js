@@ -5,7 +5,7 @@ function initBoard() {
 
 // Sets the state to a blue/red background
 function setQuestState() {
-    alert(calculateNumberOfPeople());
+
     var summaryOfQuest = localStorage.getItem("RESULT");
 
     var classList = document.getElementsByClassName("quest-icon");
@@ -30,5 +30,5 @@ function calculateNumberOfPeople() {
     var arr = localStorage.getItem("RULE").split(",");
     var amountOfPeople = arr[parseInt(localStorage.getItem("COUNTER"))];
     localStorage.setItem("NUMBER_OF_PLAYERS_PER_QUEST", amountOfPeople);
-    return amountOfPeople;
+    // return amountOfPeople;
 }
