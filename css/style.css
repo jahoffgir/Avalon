@@ -95,13 +95,20 @@
   margin-right: -10%;
 }
 
+#charImage{
+  margin: 0 1% 2% 4%;
+}
+#charDesc{
+  padding-bottom:10%;
+  font-size: 1.5em;
+}
 
 @media screen and (max-height: 560px){
   #content{
     margin-top: 25%;
     padding-bottom: 0;
   }
-  #charImg, #charDesc{
+  #charImage, #charDesc{
     display: block;
   }
 }
